@@ -1,0 +1,6 @@
+variables:	vpc_id: aws_vpc.vpc-test-gt.id (vpc-dev-gt, vpc-dev-hn ... etc)
+		transit_gateway_id: aws_ec2_transit_gateway.test-dev-tgw
+		aws_ec2_transit_gateway_vpc_attachment (depende del tipo que levanto)
+		Del transit gateway: cidr_block = "10.0.0.0/8"
+
+Todas las VPCs al apuntar al siguiente bloque: cidr_block = "10.0.0.0/8" quiere decir que apuntan al TGW y dependiendo de las route tables dentro del TGW son direccionadas a su destino correcto.
